@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.16)
+project("statebp")
+include_directories("/opt/homebrew/include/")
+link_directories("/opt/homebrew/lib/")
+add_executable(statebp main.c function.h first_page.c choose-character-page.c game_page.c generating_board_page.c message_page.c logging_page.c leadership.c)
+target_link_libraries(statebp m SDL2 SDL2_gfx SDL2_image SDL2_ttf SDL2_mixer)
